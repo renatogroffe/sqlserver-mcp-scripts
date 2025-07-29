@@ -1,5 +1,5 @@
 # sqlserver-mcp-scripts
-Exemplo de uso do MCP do SQL Server com um server de banco de dados containerizado e consultado a dados de regiões do Brasil.
+Exemplo de uso do MCP do SQL Server com um server de banco de dados containerizado e consultado a dados de regiões do Brasil. Inclui Docker Compose para criação do ambiente de testes.
 
 Arquivo mcp.json com configurações informados no Visual Studio Code:
 
