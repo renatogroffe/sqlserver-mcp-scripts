@@ -1,0 +1,19 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2025-CTP2.1-ubuntu-22.04
+    environment:
+      MSSQL_SA_PASSWORD: "SqlServer2025!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./BaseGeografica.sql:/init/BaseGeografica.sql
+    command: >
+      /bin/bash -c "
+        echo 'Inicializando SQL Server...' &&
+        /opt/mssql/bin/sqlservr & 
+        sleep 40 && 
+        echo 'Executando criacao da base de testes...' &&
+        /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P 'SqlServer2025!' -C -i /init/BaseGeografica.sql
+         wait
+      "
