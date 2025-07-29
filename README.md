@@ -18,3 +18,7 @@ Arquivo mcp.json com configurações informados no Visual Studio Code:
 	"inputs": []
 }
 ```
+
+Exemplo de uso do MCP do SQL Server a partir do Visual Studio Code:
+
+![MCP do SQL no VS Code](img/vscode-01.png)
